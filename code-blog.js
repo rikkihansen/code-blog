@@ -8,6 +8,7 @@ function Article (opts) {
   this.contributers = opts.contributers;
   this.body = opts.body;
   this.contributersUrl = opts.contributersUrl;
+  this.catagory = opts.catagory;
 }
 
 Article.prototype.toHtml= function () {
@@ -17,9 +18,7 @@ Article.prototype.toHtml= function () {
   $newArticle.find("address > a").html(this.contributers);
   $newArticle.find("address > a").attr('href', this.contributersUrl);
   $(".article-body").html(this.body);
-
   $newArticle.append('<hr>');
-
   $newArticle.removeClass('template');
 return $newArticle;
 }
