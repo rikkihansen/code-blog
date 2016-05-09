@@ -23,6 +23,4 @@ var data = [
     contributersUrl: 'https://github.com/rikkihansen/cookieStore',
     body: '<p>Cookie Store is going to show you the average cookie sales for five different locations per hour, for a days work (eight hours). There is also an option to be able to add your own location inculding your minium customer, maximum custome and your average cookies sales to calculate your own average cookie sales per hour for a day of work. </p>'
   }
-
-
 ];

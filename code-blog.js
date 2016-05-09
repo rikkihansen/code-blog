@@ -23,4 +23,5 @@ Article.prototype.toHtml= function () {
   $newArticle.removeClass('template');
 return $newArticle;
 }
+
 console.log("foo");
