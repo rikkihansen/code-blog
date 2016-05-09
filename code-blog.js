@@ -23,13 +23,13 @@ Article.prototype.toHtml= function () {
 
 return $newArticle;
 }
-//
-// data.forEach(function(ele) {
-//   articles.push(new Article(ele));
-// })
-//
-// articles.forEach(function(a){
-//   $('#articles').append(a.toHtml())
-// });
-//
+
+data.forEach(function(ele) {
+  articles.push(new Article(ele));
+})
+
+articles.forEach(function(a){
+  $('#articles').append(a.toHtml())
+});
+
 console.log("foo");

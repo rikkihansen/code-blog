@@ -19,12 +19,12 @@ var data = [
     category: 'votes',
     contributersUrl: 'https://github.com/rikkihansen/storeVotes',
     body:'<p>Store Votes is a web page I made for Bus Mall, Bus Mall is an fictitious magazine that wanted to make a web page for a focus groug. The focus group is going to be shown a series of three images, they are going to choose one of the three images by clicking on it. Once they click on an image another three images are going to appear, they are going to go through this processes until they have gone through all of them. It will tally up their votes and give us a chart that shows how many times they clicked on a particular image. </p>',
-  }
+  },
   {
     title:'Cookie Store',
     contributers: 'Rikki Hansen',
     category: 'store',
     contributersUrl: 'https://github.com/rikkihansen/cookieStore',
     body: '<p>Cookie Store is going to show you the average cookie sales for five different locations per hour, for a days work (eight hours). There is also an option to be able to add your own location inculding your minium customer, maximum custome and your average cookies sales to calculate your own average cookie sales per hour for a day of work. </p>'
-  }
+  },
 ];
