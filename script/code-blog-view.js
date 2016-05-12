@@ -19,7 +19,6 @@ view.handleAuthorFilter = function () {    // making a filter to show you which 
   $('#author-filter').on('change', function () {
     if ($(this).val()) {
       var $selectedAuthor = $('article[data-attribute="' + $(this).val() + '"]');
-                                                                                 // "Rikki Hansen, James Smith, Cass Burt"
        $('article').not($selectedAuthor).hide();
        $selectedAuthor.show();
 
