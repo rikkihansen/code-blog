@@ -1,11 +1,11 @@
 var data = [
-  // {
-  //   title: 'About Me',
-  //   contributers: 'Rikki Hansen',
-  //   category: 'me',
-  //   contributersUrl:'https://www.facebook.com/rikki.nyhus',
-  //   body:'<p>My name is <em>Rikki Hansen</em>, I am currently a Hair Sylist as well as attending Code Fellows to become a Web Developer! </p>',
-  // },
+  {
+    title: 'About Me',
+    contributers: 'Rikki Hansen',
+    category: 'me',
+    contributersUrl:'https://www.facebook.com/rikki.nyhus',
+    body:'<p>My name is <em>Rikki Hansen</em>, I am currently a Hair Sylist as well as attending Code Fellows to become a Web Developer! </p>',
+  },
   {
     title: 'Adventure Finders',
     contributers: 'Rikki Hansen, James Smith, Cass Burt',
