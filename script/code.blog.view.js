@@ -2,7 +2,7 @@ var view = {};
 
 view.populateFilters = function () {
   $('article').each(function () {
-    console.log(this);
+    // console.log(this);
     if (!$(this).hasClass('template')) {
       var val = $(this).find('address a').text();
       console.log('val', val);
@@ -21,15 +21,14 @@ view.populateFilters = function () {
 view.handleAuthorFilter = function () {    // making a filter to show you which author "contributers" projects you choose
   $('#author-filter').on('change', function () {
     if ($(this).val()) {
-      var $selectedAuthor = $('article[data-attribute="' + $(this).val() + '"]');
-       $('article').not($selectedAuthor).hide();
-       $selectedAuthor.show();
+      var $selectedAuthor = $('article[data-attribute="' + $(this).val() + '"]'); $('article').not($selectedAuthor).hide();
+      $selectedAuthor.show();
 
     } else {
       $('artcle').not('.template').show();
     }
     $('#author-filter').val('');
-});
+  });
 
 };
 
@@ -37,15 +36,15 @@ view.handleCategoryFilter = function () {   // making a filter to show you which
   $('#category-filter').on('change', function () {
     if ($(this).val()) {
       var $selectedCategory = $('article[data-category="' + $(this).val () + '"]');
-       $('article').not($selectedCategory).hide();
-       $selectedCategory.show();
+      $('article').not($selectedCategory).hide();
+      $selectedCategory.show();
 
     } else {
       $('artcle').not('.template').show();
     }
     $('#category-filter').val('');
 
-});
+  });
 
 };
 

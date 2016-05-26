@@ -14,6 +14,7 @@
   Article.prototype.toHtml= function () {
     var appTemplate = $('#project-template').html();
     var compileTemplate = Handlebars.compile(appTemplate);
+    console.log(compileTemplate);
         // console.log(compileTemplate(this));
     return compileTemplate(this);
   //   var $newArticle = $('article.template').clone();
@@ -26,14 +27,33 @@
   //   $newArticle.removeClass('template');
   //
   // return $newArticle;
-  }
+  };
 
-  data.forEach(function(ele) {
-    articles.push(new Article(ele));
-  })
+  Article.fetchAll = function (callback) {
 
-  articles.forEach(function(a){
-    $('#article').append(a.toHtml())
-  });
+    if (localStorage.getItem('articles')) {
+      var storedDataString = JSON.parse(localStorage.getItem('articles'));
+      storedDataString.forEach(function(article){
+        var a = new Article(article);
+        $('#article').append(a.toHtml());
+      });
+    } else {
+      $.ajax({
+        type: 'GET',
+        url: 'data/blog.content.json',
+        success: function (data) {
+          localStorage.setItem('data', JSON.stringify(data));
+          data.forEach(function(article){
+            var a = new Article(article)
+            articles.push(a);
+            $('#article').append(a.toHtml());
+          });
 
-  console.log("foo");
+          localStorage.setItem('articles', JSON.stringify(articles));
+        },
+        error: function(error) {
+          console.log('what', error);
+        }
+      });
+    }
+  };
