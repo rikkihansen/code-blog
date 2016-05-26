@@ -4,30 +4,75 @@
 <link rel="stylesheet" href="code-blog.css">
 </head>
 <body>
+  <div class="image-area">
+  </div>
+
   <nav class="topNav">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="https://github.com/rikkihansen">GitHub</a>
+  <ul>
+    <li class="tab" data-content="article"><a href="#">Home</a></li>
+    <li class="tab" data-content="about"><a href="#">About</a></li>
+    <li><a href="https://github.com/rikkihansen">GitHub</a></li>
+  </ul>
   </nav>
 
-  <section id="articles">
-          <article class="template" data-category="">
+<div class="wrap">
+  <section id="article" class="tab-content">
+    <div>
+         <ul id="filters">
+           <li>
+             <select id="author-filter">
+               <option value="">-- Filter by Authors --</option>
+             </select>
+           </li>
+           <li>
+             <select id="category-filter">
+               <option value="">-- Filter by Categories --</option>
+             </select>
+           </li>
+         </ul>
+       </div>
+       <script id="project-template" type="text/x-handlebars-template">
+          <article  data-category="{{category}}" data-attribute="{{contributers}}">
             <header>
-              <h1>Title</h1>
+              <!-- <h1>Rikki Hansen</h1> -->
+              <h1>{{title}}</h1>
               <div class="byline">
-                By <address><a href="">Author Name</a></address>
-                published <time pubdate datetime="2000-01-01">Publish Time</time>
+                By <address><a href="#">{{contributers}}</a></address>
+                <!-- published <time pubdate datetime="2000-01-01">Publish Time</time> -->
               </div>
             </header>
-            <section class="article-body"></section>
+            <section class="article-body">{{{body}}}</section>
+            <a href="#" class="read-on">Read On </a>
           </article>
+          </script>
         </section>
+        <section id="about" class="tab-content">
+        <header>
+          Welcome to my Blog
+        </header>
+        <section>
+          <h1>Some of my interests:</h1>
+          <ul>
+            <li>Coding</li>
+            <li>Hair Styling / Coloring</li>
+            <li>Hanging out with friends</li>
+            <li>Being with family</li>
+          </ul>
+        </section>
+      </section>
+
       </div>
+</div>
+<footer class="footer">
+   &copy; 2016 Rikki Hansen |  |
+ </footer>
 
 
 
   <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
-  <script type="text/javascript" src="blog-content.js"></script>
-  <script type="text/javascript" src="code-blog.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+  <script type="text/javascript" src="script/blog-content.js"></script>
+  <script type="text/javascript" src="script/code-blog.js"></script>
+  <script type="text/javascript" src="script/code-blog-view.js"></script>
 </body>
 </html>
