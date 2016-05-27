@@ -44,7 +44,7 @@
         success: function (data) {
           localStorage.setItem('data', JSON.stringify(data));
           data.forEach(function(article){
-            var a = new Article(article)
+            var a = new Article(article);
             articles.push(a);
             $('#article').append(a.toHtml());
           });
