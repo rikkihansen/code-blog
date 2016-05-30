@@ -85,4 +85,7 @@
       view.setTeasers();
       view.about();
     });
+
+    module.view = view;
+
   }) (window);
