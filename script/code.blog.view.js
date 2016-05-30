@@ -1,8 +1,9 @@
+(function(module) {
 var view = {};
 
 view.populateFilters = function () {
   $('article').each(function () {
-    // console.log(this);
+    console.log(this);
     if (!$(this).hasClass('template')) {
       var val = $(this).find('address a').text();
       console.log('val', val);
@@ -72,10 +73,16 @@ view.setTeasers = function () {
 
 };
 
+view.about = function() {
+  $('#about').hide();
+};
+
 $(function() {               // calling
   view.populateFilters();
   view.handleAuthorFilter();
   view.handleCategoryFilter();
   view.handleTopNav();
   view.setTeasers();
+  view.about();
 });
+}) (window);

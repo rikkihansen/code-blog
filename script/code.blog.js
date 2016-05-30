@@ -1,6 +1,4 @@
-  // $(document).ready(function(){
-  //
-  // });
+(function(module) {
   var articles = [];
 
   function Article (opts) {
@@ -42,7 +40,6 @@
         type: 'GET',
         url: 'data/blog.content.json',
         success: function (data) {
-          localStorage.setItem('data', JSON.stringify(data));
           data.forEach(function(article){
             var a = new Article(article);
             articles.push(a);
@@ -57,3 +54,7 @@
       });
     }
   };
+
+  module.Article = Article;
+
+})(window);
