@@ -49,16 +49,30 @@
 
     };
 
-    view.handleTopNav = function() {
-      $('.topNav .tab').on('click', function () {
-        var tabId= $(this).attr('data-content');
-        var selectedTab = $('#'+tabId);
-
-        $('section.tab-content').hide();
-        selectedTab.show();
-      });
-      // $('.topNav .tab:first').click();
+    view.articleView = function() {    // adding to routes.js to to be
+      $('.article-body').hide();             // in SPA
+      $('#about').show();
     };
+
+    view.about = function() {
+      Article.fetchAll();
+      $('#about').hide();
+      $('.article-body').show();
+
+    };
+
+
+
+    // view.handleTopNav = function() {
+    //   $('.topNav .tab').on('click', function () {
+    //     var tabId= $(this).attr('data-content');
+    //     var selectedTab = $('#'+tabId);
+    //
+    //     $('section.tab-content').hide();
+    //     selectedTab.show();
+    //   });
+    //   $('.topNav .tab:first').click();
+    // };
 
     view.setTeasers = function () {
       $('.article-body *:nth-of-type(n+2)').hide();
@@ -73,10 +87,6 @@
 
     };
 
-    view.about = function() {
-      $('#about').hide();
-    };
-
     $(function() {               // calling
       view.populateFilters();
       view.handleAuthorFilter();
@@ -84,6 +94,7 @@
       view.handleTopNav();
       view.setTeasers();
       view.about();
+      view.articleView();
     });
 
     module.view = view;
