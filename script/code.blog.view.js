@@ -1,8 +1,8 @@
   (function(module) {
     var view = {};
 
-    view.populateFilters = function () {
-      $('article').each(function () {
+    view.populateFilters = function() {
+      $('article').each(function() {
         console.log(this);
         if (!$(this).hasClass('template')) {
           var val = $(this).find('address a').text();
@@ -19,8 +19,8 @@
       });
     };
 
-    view.handleAuthorFilter = function () {    // making a filter to show you which author "contributers" projects you choose
-      $('#author-filter').on('change', function () {
+    view.handleAuthorFilter = function() {    // making a filter to show you which author "contributers" projects you choose
+      $('#author-filter').on('change', function() {
         if ($(this).val()) {
           var $selectedAuthor = $('article[data-attribute="' + $(this).val() + '"]'); $('article').not($selectedAuthor).hide();
           $selectedAuthor.show();
@@ -33,8 +33,8 @@
 
     };
 
-    view.handleCategoryFilter = function () {   // making a filter to show you which categorys projects you choose
-      $('#category-filter').on('change', function () {
+    view.handleCategoryFilter = function() {   // making a filter to show you which categorys projects you choose
+      $('#category-filter').on('change', function() {
         if ($(this).val()) {
           var $selectedCategory = $('article[data-category="' + $(this).val () + '"]');
           $('article').not($selectedCategory).hide();
@@ -49,15 +49,16 @@
 
     };
 
-    view.articleView = function() {    // adding to routes.js to to be
-      $('.article-body').hide();             // in SPA
-      $('#about').show();
+    view.articleView = function() {    // adding to routes.js to to be SPA
+      Article.fetchAll();
+      $('#article').show();
+      $('#about').hide();
+
     };
 
     view.about = function() {
-      Article.fetchAll();
-      $('#about').hide();
-      $('.article-body').show();
+      $('#about').show();
+      $('#article').hide();
 
     };
 
@@ -74,10 +75,10 @@
     //   $('.topNav .tab:first').click();
     // };
 
-    view.setTeasers = function () {
+    view.setTeasers = function() {
       $('.article-body *:nth-of-type(n+2)').hide();
 
-      $('section#article .read-on').on('click', function (e) {
+      $('section#article .read-on').on('click', function(e) {
         e.preventDefault();
         var readOnLink= $(e.target);
 
@@ -91,7 +92,7 @@
       view.populateFilters();
       view.handleAuthorFilter();
       view.handleCategoryFilter();
-      view.handleTopNav();
+      // view.handleTopNav();
       view.setTeasers();
       view.about();
       view.articleView();

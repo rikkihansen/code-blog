@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>Code Blog</title>
-<link rel="stylesheet" href="code-blog.css">
+<link rel="stylesheet" href="style/code-blog.css">
 </head>
 <body>
   <div class="image-area">
@@ -9,8 +9,8 @@
 
   <nav class="topNav">
   <ul>
-    <li class="tab" data-content="article"><a href="#">Home</a></li>
-    <li class="tab" data-content="about"><a href="#" data-transition="slide">About</a></li>
+    <li class="tab" data-content="article"><a href="/">Home</a></li>
+    <li class="tab" data-content="about"><a href="/about" data-transition="slide">About</a></li>
     <li><a href="https://github.com/rikkihansen">GitHub</a></li>
   </ul>
   </nav>
@@ -79,7 +79,8 @@
   <script type="text/javascript" src="data/blog.content.json"></script>
   <script type="text/javascript" src="script/code.blog.js"></script>
   <script type="text/javascript" src="script/code.blog.view.js"></script>
-  <script src="scripts/routes.js"></script>
+  <script src="vender/page.js"></script>
+  <script src="script/routes.js"></script>
   <!-- <script>
 
      Article.fetchAll();

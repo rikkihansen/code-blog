@@ -12,7 +12,7 @@
   Article.prototype.toHtml= function () {
     var appTemplate = $('#project-template').html();
     var compileTemplate = Handlebars.compile(appTemplate);
-    console.log(compileTemplate);
+    // console.log(compileTemplate);
         // console.log(compileTemplate(this));
     return compileTemplate(this);
   //   var $newArticle = $('article.template').clone();

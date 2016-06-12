@@ -51,7 +51,7 @@ a:hover {
 .image-area {
   width: 100%;
   height: 100%;
-  background-image: url("images/deer.jpg");
+  background-image: url("../images/deer.jpg");
   position: fixed;
   z-index: -10;
   margin: 0;
