@@ -15,16 +15,6 @@
     // console.log(compileTemplate);
         // console.log(compileTemplate(this));
     return compileTemplate(this);
-  //   var $newArticle = $('article.template').clone();
-  //   $newArticle.attr('data-category', this.category);
-  //   $newArticle.attr('data-attribute', this.contributers);
-  //   $newArticle.find('h1').text(this.title);
-  //   $newArticle.find('address > a').html(this.contributers);
-  //   $newArticle.find('address > a').attr('href', this.contributersUrl);
-  //   $('.article-body').html(this.body);
-  //   $newArticle.removeClass('template');
-  //
-  // return $newArticle;
   };
 
   Article.fetchAll = function (callback) {

@@ -62,19 +62,6 @@
 
     };
 
-
-
-    // view.handleTopNav = function() {
-    //   $('.topNav .tab').on('click', function () {
-    //     var tabId= $(this).attr('data-content');
-    //     var selectedTab = $('#'+tabId);
-    //
-    //     $('section.tab-content').hide();
-    //     selectedTab.show();
-    //   });
-    //   $('.topNav .tab:first').click();
-    // };
-
     view.setTeasers = function() {
       $('.article-body *:nth-of-type(n+2)').hide();
 
@@ -92,7 +79,6 @@
       view.populateFilters();
       view.handleAuthorFilter();
       view.handleCategoryFilter();
-      // view.handleTopNav();
       view.setTeasers();
       view.about();
       view.articleView();

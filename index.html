@@ -2,6 +2,18 @@
 <head>
 <title>Code Blog</title>
 <link rel="stylesheet" href="style/code-blog.css">
+<script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
 </head>
 <body>
   <div class="image-area">
@@ -79,6 +91,8 @@
   <script type="text/javascript" src="data/blog.content.json"></script>
   <script type="text/javascript" src="script/code.blog.js"></script>
   <script type="text/javascript" src="script/code.blog.view.js"></script>
+  <script src="script/repo.js"></script>
+  <script src="script/repoView.js"></script>
   <script src="vender/page.js"></script>
   <script src="script/routes.js"></script>
   <!-- <script>
