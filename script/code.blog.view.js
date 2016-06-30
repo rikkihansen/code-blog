@@ -79,7 +79,7 @@
       view.handleAuthorFilter();
       view.handleCategoryFilter();
       view.setTeasers();
-      view.about();
+      // view.about();
       view.articleView();
     });
 
