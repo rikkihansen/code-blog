@@ -59,7 +59,6 @@
     view.about = function() {
       $('#about').show();
       $('#article').hide();
-
     };
 
     view.setTeasers = function() {

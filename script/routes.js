@@ -1,4 +1,5 @@
 page('/', view.articleView);
-page('/about', view.about);
+page('/about', aboutController.index);
+// page('/about', view.about);
 
 page();
