@@ -56,10 +56,10 @@
 
     };
 
-    view.about = function() {
-      $('#about').show();
-      $('#article').hide();
-    };
+    // view.about = function() {
+    //   $('#about').show();
+    //   $('#article').hide();
+    // };
 
     view.setTeasers = function() {
       $('.article-body *:nth-of-type(n+2)').hide();
