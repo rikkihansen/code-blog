@@ -9,7 +9,7 @@
     $.ajax({
       url: '/github/rikkihansen',
       type: 'GET',
-      headers: { 'Authorization': 'token ' + githubToken },
+      headers: { 'Authorization': 'GITHUB_TOKEN' + githubToken },
       success: function(data, message, xhr) {
         repos.all = data;
       }
